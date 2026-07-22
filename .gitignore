@@ -1,3 +1,4 @@
 *.env
 project-env/
 node_modules/
+venv/
