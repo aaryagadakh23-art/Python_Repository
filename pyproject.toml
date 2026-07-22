@@ -1,2 +1,11 @@
+[project]
+name = "sample-project"
+version = "0.1.0"
+description = "FastAPI app for Vercel deployment"
+dependencies = [
+    "fastapi",
+    "uvicorn"
+]
+
 [tool.vercel]
 entrypoint = "backend.app.main:app"
