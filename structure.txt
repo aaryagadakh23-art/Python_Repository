@@ -1,0 +1,76 @@
+Folder PATH listing for volume OS
+Volume serial number is 00000046 769B:9D67
+C:.
+|   .env
+|   .gitignore
+|   requirements.txt
+|   structure.txt
+|   
++---backend
+|   |   .env
+|   |   database-connection.py
+|   |   README.md
+|   |   render.yaml
+|   |   
+|   +---app
+|   |   |   config.py
+|   |   |   crud.py
+|   |   |   database.py
+|   |   |   logger.py
+|   |   |   main.py
+|   |   |   models.py
+|   |   |   schemas.py
+|   |   |   __init__.py
+|   |   |   
+|   |   +---logs
+|   |   |       app.log
+|   |   |       
+|   |   \---__pycache__
+|   |           config.cpython-311.pyc
+|   |           crud.cpython-311.pyc
+|   |           database.cpython-311.pyc
+|   |           logger.cpython-311.pyc
+|   |           main.cpython-311.pyc
+|   |           models.cpython-311.pyc
+|   |           schemas.cpython-311.pyc
+|   |           __init__.cpython-311.pyc
+|   |           
+|   \---logs
+|           app.log
+|           
++---frontend
+|   |   package.json
+|   |   vite.config.js
+|   |   
+|   +---public
+|   \---src
+|           index.html
+|           script.js
+|           style.css
+|           
+\---project-env
+    |   .gitignore
+    |   CACHEDIR.TAG
+    |   pyvenv.cfg
+    |   
+    +---Lib
+    |   \---site-packages
+    |       |   _virtualenv.pth
+    |       |   _virtualenv.py
+    |       |   
+    |       \---__pycache__
+    |               _virtualenv.cpython-311.pyc
+    |               
+    \---Scripts
+            activate
+            activate.bat
+            activate.csh
+            activate.fish
+            activate.nu
+            activate.ps1
+            activate_this.py
+            deactivate.bat
+            pydoc.bat
+            python.exe
+            pythonw.exe
+            

@@ -1,0 +1,228 @@
+2026-07-18 12:53:55,851 | INFO | Logger initialized successfully.
+2026-07-18 12:53:56,172 | INFO | Database Engine Created Successfully.
+2026-07-18 12:53:56,172 | INFO | Session Factory Created.
+2026-07-18 13:15:27,487 | INFO | Logger initialized successfully.
+2026-07-18 13:15:27,520 | INFO | Database Engine Created Successfully.
+2026-07-18 13:15:27,520 | INFO | Session Factory Created.
+2026-07-18 13:15:27,520 | INFO | Base Class Created.
+2026-07-20 23:32:14,932 | INFO | Logger initialized successfully.
+2026-07-20 23:32:14,973 | INFO | Database Engine Created Successfully.
+2026-07-20 23:32:14,973 | INFO | Session Factory Created.
+2026-07-20 23:32:14,974 | INFO | Base Class Created.
+2026-07-20 23:32:15,014 | INFO | select pg_catalog.version()
+2026-07-20 23:32:15,014 | INFO | [raw sql] {}
+2026-07-20 23:32:15,015 | INFO | select current_schema()
+2026-07-20 23:32:15,015 | INFO | [raw sql] {}
+2026-07-20 23:32:15,015 | INFO | show standard_conforming_strings
+2026-07-20 23:32:15,016 | INFO | [raw sql] {}
+2026-07-20 23:32:15,016 | INFO | BEGIN (implicit)
+2026-07-20 23:32:15,018 | INFO | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-07-20 23:32:15,018 | INFO | [generated in 0.00020s] {'table_name': 'students', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-07-20 23:32:15,020 | INFO | 
+CREATE TABLE students (
+	id SERIAL NOT NULL, 
+	name VARCHAR(100) NOT NULL, 
+	email VARCHAR(100) NOT NULL, 
+	course VARCHAR(50) NOT NULL, 
+	city VARCHAR(50) NOT NULL, 
+	phone VARCHAR(15), 
+	PRIMARY KEY (id), 
+	UNIQUE (email)
+)
+
+
+2026-07-20 23:32:15,021 | INFO | [no key 0.00021s] {}
+2026-07-20 23:32:15,093 | INFO | CREATE INDEX ix_students_id ON students (id)
+2026-07-20 23:32:15,093 | INFO | [no key 0.00027s] {}
+2026-07-20 23:32:15,096 | INFO | COMMIT
+2026-07-20 23:32:15,097 | INFO | Database Tables Checked/Created.
+2026-07-20 23:32:15,097 | INFO | FastAPI Application Started.
+2026-07-20 23:32:25,647 | INFO | Home API Called.
+2026-07-20 23:32:58,696 | INFO | Database Session Started...
+2026-07-20 23:32:58,696 | INFO | Get All Students API Called.
+2026-07-20 23:32:58,696 | INFO | Fetching All Students...
+2026-07-20 23:32:58,698 | INFO | BEGIN (implicit)
+2026-07-20 23:32:58,702 | INFO | SELECT students.id AS students_id, students.name AS students_name, students.email AS students_email, students.course AS students_course, students.city AS students_city, students.phone AS students_phone 
+FROM students
+2026-07-20 23:32:58,702 | INFO | [generated in 0.00041s] {}
+2026-07-20 23:32:58,707 | INFO | ROLLBACK
+2026-07-20 23:32:58,708 | INFO | Database Session Closed.
+2026-07-20 23:33:16,822 | INFO | Home API Called.
+2026-07-21 11:36:43,506 | INFO | Logger initialized successfully.
+2026-07-21 11:36:43,574 | INFO | Database Engine Created Successfully.
+2026-07-21 11:36:43,574 | INFO | Session Factory Created.
+2026-07-21 11:36:43,574 | INFO | Base Class Created.
+2026-07-21 11:36:43,607 | INFO | select pg_catalog.version()
+2026-07-21 11:36:43,607 | INFO | [raw sql] {}
+2026-07-21 11:36:43,608 | INFO | select current_schema()
+2026-07-21 11:36:43,608 | INFO | [raw sql] {}
+2026-07-21 11:36:43,609 | INFO | show standard_conforming_strings
+2026-07-21 11:36:43,609 | INFO | [raw sql] {}
+2026-07-21 11:36:43,610 | INFO | BEGIN (implicit)
+2026-07-21 11:36:43,612 | INFO | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-07-21 11:36:43,612 | INFO | [generated in 0.00024s] {'table_name': 'students', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-07-21 11:36:43,615 | INFO | COMMIT
+2026-07-21 11:36:43,615 | INFO | Database Tables Checked/Created.
+2026-07-21 11:36:43,616 | INFO | FastAPI Application Started.
+2026-07-21 11:48:51,544 | INFO | Logger initialized successfully.
+2026-07-21 11:48:51,657 | INFO | Database Engine Created Successfully.
+2026-07-21 11:48:51,657 | INFO | Session Factory Created.
+2026-07-21 11:48:51,657 | INFO | Base Class Created.
+2026-07-21 11:48:51,713 | INFO | select pg_catalog.version()
+2026-07-21 11:48:51,714 | INFO | [raw sql] {}
+2026-07-21 11:48:51,714 | INFO | select current_schema()
+2026-07-21 11:48:51,714 | INFO | [raw sql] {}
+2026-07-21 11:48:51,716 | INFO | show standard_conforming_strings
+2026-07-21 11:48:51,716 | INFO | [raw sql] {}
+2026-07-21 11:48:51,717 | INFO | BEGIN (implicit)
+2026-07-21 11:48:51,722 | INFO | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-07-21 11:48:51,722 | INFO | [generated in 0.00050s] {'table_name': 'students', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-07-21 11:48:51,726 | INFO | COMMIT
+2026-07-21 11:48:51,727 | INFO | Database Tables Checked/Created.
+2026-07-21 11:48:51,727 | INFO | FastAPI Application Started.
+2026-07-21 11:48:56,382 | INFO | Home API Called.
+2026-07-21 11:55:51,650 | INFO | Home API Called.
+2026-07-21 12:11:06,204 | INFO | Logger initialized successfully.
+2026-07-21 12:11:06,313 | INFO | Database Engine Created Successfully.
+2026-07-21 12:11:06,313 | INFO | Session Factory Created.
+2026-07-21 12:11:06,313 | INFO | Base Class Created.
+2026-07-21 12:11:07,090 | INFO | select pg_catalog.version()
+2026-07-21 12:11:07,090 | INFO | [raw sql] {}
+2026-07-21 12:11:07,094 | INFO | select current_schema()
+2026-07-21 12:11:07,094 | INFO | [raw sql] {}
+2026-07-21 12:11:07,097 | INFO | show standard_conforming_strings
+2026-07-21 12:11:07,097 | INFO | [raw sql] {}
+2026-07-21 12:11:07,098 | INFO | BEGIN (implicit)
+2026-07-21 12:11:07,103 | INFO | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-07-21 12:11:07,104 | INFO | [generated in 0.00076s] {'table_name': 'students', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-07-21 12:11:07,114 | INFO | COMMIT
+2026-07-21 12:11:07,115 | INFO | Database Tables Checked/Created.
+2026-07-21 12:11:07,116 | INFO | FastAPI Application Started.
+2026-07-21 12:12:19,660 | INFO | Home API Called.
+2026-07-21 12:13:53,965 | INFO | Logger initialized successfully.
+2026-07-21 12:13:54,036 | INFO | Database Engine Created Successfully.
+2026-07-21 12:13:54,036 | INFO | Session Factory Created.
+2026-07-21 12:13:54,036 | INFO | Base Class Created.
+2026-07-21 12:13:55,961 | INFO | Logger initialized successfully.
+2026-07-21 12:13:56,038 | INFO | Database Engine Created Successfully.
+2026-07-21 12:13:56,038 | INFO | Session Factory Created.
+2026-07-21 12:13:56,039 | INFO | Base Class Created.
+2026-07-21 12:13:57,421 | INFO | Logger initialized successfully.
+2026-07-21 12:13:57,501 | INFO | Database Engine Created Successfully.
+2026-07-21 12:13:57,502 | INFO | Session Factory Created.
+2026-07-21 12:13:57,502 | INFO | Base Class Created.
+2026-07-21 12:16:12,679 | INFO | Logger initialized successfully.
+2026-07-21 12:16:12,738 | INFO | Database Engine Created Successfully.
+2026-07-21 12:16:12,738 | INFO | Session Factory Created.
+2026-07-21 12:16:12,738 | INFO | Base Class Created.
+2026-07-21 12:16:12,805 | INFO | select pg_catalog.version()
+2026-07-21 12:16:12,805 | INFO | [raw sql] {}
+2026-07-21 12:16:12,807 | INFO | select current_schema()
+2026-07-21 12:16:12,807 | INFO | [raw sql] {}
+2026-07-21 12:16:12,808 | INFO | show standard_conforming_strings
+2026-07-21 12:16:12,808 | INFO | [raw sql] {}
+2026-07-21 12:16:12,809 | INFO | BEGIN (implicit)
+2026-07-21 12:16:12,813 | INFO | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-07-21 12:16:12,813 | INFO | [generated in 0.00055s] {'table_name': 'students', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-07-21 12:16:12,817 | INFO | COMMIT
+2026-07-21 12:16:12,818 | INFO | Database Tables Checked/Created.
+2026-07-21 12:16:12,818 | INFO | FastAPI Application Started.
+2026-07-21 12:16:12,878 | INFO | Database Session Started...
+2026-07-21 12:16:12,881 | INFO | Database Session Closed.
+2026-07-21 12:16:46,934 | INFO | Logger initialized successfully.
+2026-07-21 12:16:46,992 | INFO | Database Engine Created Successfully.
+2026-07-21 12:16:46,992 | INFO | Session Factory Created.
+2026-07-21 12:16:46,992 | INFO | Base Class Created.
+2026-07-21 12:16:47,050 | INFO | select pg_catalog.version()
+2026-07-21 12:16:47,051 | INFO | [raw sql] {}
+2026-07-21 12:16:47,052 | INFO | select current_schema()
+2026-07-21 12:16:47,053 | INFO | [raw sql] {}
+2026-07-21 12:16:47,053 | INFO | show standard_conforming_strings
+2026-07-21 12:16:47,053 | INFO | [raw sql] {}
+2026-07-21 12:16:47,054 | INFO | BEGIN (implicit)
+2026-07-21 12:16:47,057 | INFO | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-07-21 12:16:47,057 | INFO | [generated in 0.00026s] {'table_name': 'students', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-07-21 12:16:47,061 | INFO | COMMIT
+2026-07-21 12:16:47,061 | INFO | Database Tables Checked/Created.
+2026-07-21 12:16:47,062 | INFO | FastAPI Application Started.
+2026-07-21 12:16:48,351 | INFO | Logger initialized successfully.
+2026-07-21 12:16:48,410 | INFO | Database Engine Created Successfully.
+2026-07-21 12:16:48,410 | INFO | Session Factory Created.
+2026-07-21 12:16:48,410 | INFO | Base Class Created.
+2026-07-21 12:16:48,462 | INFO | select pg_catalog.version()
+2026-07-21 12:16:48,463 | INFO | [raw sql] {}
+2026-07-21 12:16:48,464 | INFO | select current_schema()
+2026-07-21 12:16:48,464 | INFO | [raw sql] {}
+2026-07-21 12:16:48,465 | INFO | show standard_conforming_strings
+2026-07-21 12:16:48,465 | INFO | [raw sql] {}
+2026-07-21 12:16:48,465 | INFO | BEGIN (implicit)
+2026-07-21 12:16:48,469 | INFO | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-07-21 12:16:48,469 | INFO | [generated in 0.00043s] {'table_name': 'students', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-07-21 12:16:48,475 | INFO | COMMIT
+2026-07-21 12:16:48,476 | INFO | Database Tables Checked/Created.
+2026-07-21 12:16:48,477 | INFO | FastAPI Application Started.
+2026-07-21 12:16:54,702 | INFO | Logger initialized successfully.
+2026-07-21 12:16:54,754 | INFO | Database Engine Created Successfully.
+2026-07-21 12:16:54,754 | INFO | Session Factory Created.
+2026-07-21 12:16:54,754 | INFO | Base Class Created.
+2026-07-21 12:16:54,807 | INFO | select pg_catalog.version()
+2026-07-21 12:16:54,807 | INFO | [raw sql] {}
+2026-07-21 12:16:54,808 | INFO | select current_schema()
+2026-07-21 12:16:54,809 | INFO | [raw sql] {}
+2026-07-21 12:16:54,810 | INFO | show standard_conforming_strings
+2026-07-21 12:16:54,810 | INFO | [raw sql] {}
+2026-07-21 12:16:54,811 | INFO | BEGIN (implicit)
+2026-07-21 12:16:54,814 | INFO | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-07-21 12:16:54,814 | INFO | [generated in 0.00036s] {'table_name': 'students', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-07-21 12:16:54,818 | INFO | COMMIT
+2026-07-21 12:16:54,819 | INFO | Database Tables Checked/Created.
+2026-07-21 12:16:54,820 | INFO | FastAPI Application Started.
+2026-07-21 12:16:59,312 | INFO | Logger initialized successfully.
+2026-07-21 12:16:59,370 | INFO | Database Engine Created Successfully.
+2026-07-21 12:16:59,371 | INFO | Session Factory Created.
+2026-07-21 12:16:59,371 | INFO | Base Class Created.
+2026-07-21 12:16:59,531 | INFO | select pg_catalog.version()
+2026-07-21 12:16:59,531 | INFO | [raw sql] {}
+2026-07-21 12:16:59,531 | INFO | select current_schema()
+2026-07-21 12:16:59,532 | INFO | [raw sql] {}
+2026-07-21 12:16:59,533 | INFO | show standard_conforming_strings
+2026-07-21 12:16:59,533 | INFO | [raw sql] {}
+2026-07-21 12:16:59,534 | INFO | BEGIN (implicit)
+2026-07-21 12:16:59,536 | INFO | SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = %(table_name)s AND pg_catalog.pg_class.relkind = ANY (ARRAY[%(param_1)s, %(param_2)s, %(param_3)s, %(param_4)s, %(param_5)s]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != %(nspname_1)s
+2026-07-21 12:16:59,537 | INFO | [generated in 0.00029s] {'table_name': 'students', 'param_1': 'r', 'param_2': 'p', 'param_3': 'f', 'param_4': 'v', 'param_5': 'm', 'nspname_1': 'pg_catalog'}
+2026-07-21 12:16:59,540 | INFO | COMMIT
+2026-07-21 12:16:59,541 | INFO | Database Tables Checked/Created.
+2026-07-21 12:16:59,541 | INFO | FastAPI Application Started.
+2026-07-21 12:17:34,900 | INFO | Database Session Started...
+2026-07-21 12:17:34,901 | INFO | Create Student API Called.
+2026-07-21 12:17:34,901 | INFO | Creating Student
+2026-07-21 12:17:34,903 | INFO | BEGIN (implicit)
+2026-07-21 12:17:34,904 | INFO | INSERT INTO students (name, email, course, city, phone) VALUES (%(name)s, %(email)s, %(course)s, %(city)s, %(phone)s) RETURNING students.id
+2026-07-21 12:17:34,904 | INFO | [generated in 0.00025s] {'name': 'Lokesh', 'email': 'lokesh@gmail.com', 'course': 'Python', 'city': 'Pune', 'phone': 7559251557}
+2026-07-21 12:17:34,928 | INFO | COMMIT
+2026-07-21 12:17:34,931 | INFO | BEGIN (implicit)
+2026-07-21 12:17:34,933 | INFO | SELECT students.id, students.name, students.email, students.course, students.city, students.phone 
+FROM students 
+WHERE students.id = %(pk_1)s
+2026-07-21 12:17:34,933 | INFO | [generated in 0.00041s] {'pk_1': 1}
+2026-07-21 12:17:34,935 | INFO | Student Created : Lokesh
+2026-07-21 12:17:34,942 | INFO | ROLLBACK
+2026-07-21 12:17:34,943 | INFO | Database Session Closed.
